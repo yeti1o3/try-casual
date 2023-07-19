@@ -8,6 +8,7 @@ import { Route,Routes } from 'react-router-dom';
 import Product_Page from './Product_Page';
 import Product_Details from './Product_Details'
 import PageNotFound from './PageNotFound';
+import CheckoutPage from './CheckoutPage';
 import{ useState} from 'react';
 
 function App() {
@@ -25,9 +26,12 @@ function App() {
         </Route>
         <Route path='/detail/:id' element={<Product_Details onAddToCart={handleAddToCart}/>}>
         </Route>
+        <Route path='/checkout' element={<CheckoutPage/>}>
+        </Route>
         <Route path='*' element={<PageNotFound />}>
         </Route>
       </Routes>
+
     </div>
   );
 }

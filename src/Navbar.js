@@ -2,7 +2,8 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { BiShoppingBag } from 'react-icons/bi'
-function Navbar({basketCount}) {
+function Navbar({totalCount}) {
+  
   return (
     <div className='navbar'>
       <div className="navbar__Content">
@@ -13,7 +14,7 @@ function Navbar({basketCount}) {
       <div className='navbar__Links'>
         <div>Link1</div>
         <div>Link2</div>
-        <div className='navbar__Addtocart'><span>{basketCount}</span><BiShoppingBag/></div>
+        <Link to='/checkout'><div className='navbar__Addtocart'><span>{totalCount}</span><BiShoppingBag/></div></Link>
       </div>
       </div>
     </div>
