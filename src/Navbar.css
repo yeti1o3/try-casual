@@ -1,0 +1,28 @@
+.navbar{
+    height: 100px;
+    background-color: white;
+    width: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar__Content{
+    display: flex;
+    width: 90%;
+    height: 40px;
+    align-items: center;
+    justify-content:space-between ;
+}
+.navbar__Mainlogo{
+    margin-left: 10px;
+}
+.navbar__Links{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.navbar__Addtocart{
+    font-size: 30px;
+}
