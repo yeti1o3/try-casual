@@ -44,7 +44,7 @@ function Product_Details({ onAddToCart }) {
         <img src={product.thumbnail} alt=""/>
         </div>
         <div className="product_details_description">
-            <h1>{product.tag}</h1>
+            <h1>{product.title}</h1>
             <p>${product.price}</p>
             <div className='short_description'>
                 <p>{product.description}</p>
