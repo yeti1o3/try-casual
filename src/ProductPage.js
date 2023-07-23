@@ -1,7 +1,7 @@
 import React from 'react'
 import Content from './Content'
 
-function Product_Page() {
+function ProductPage() {
   return (
     <div>
         <Content/>
@@ -9,4 +9,4 @@ function Product_Page() {
   )
 }
 
-export default Product_Page
+export default ProductPage

@@ -1,12 +1,12 @@
 import React ,{ useEffect, useState }from 'react'
-import './Product_Details.css'
+import './ProductDetails.css'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import PageNotFound from './PageNotFound'
 import Loading from './Loading'
 
 
-function Product_Details({ onAddToCart }) {
+function ProductDetails({ onAddToCart }) {
    const[product,updataproduct]=useState({});
    const[loading,updateLoading]=useState(true);
    const[itemCount,updateItemCount]=useState(1);
@@ -39,12 +39,12 @@ function Product_Details({ onAddToCart }) {
     return(<PageNotFound></PageNotFound>)
   }
   return (
-   <div className='product_details'>
-        <div className="product_details_thumbnail"> 
+   <div className='ProductDetails'>
+        <div className="ProductDetails_thumbnail"> 
         <img src={product.thumbnail} alt=""/>
         </div>
-        <div className="product_details_description">
-            <h1>{product.tag}</h1>
+        <div className="ProductDetails_description">
+            <h1>{product.title}</h1>
             <p>${product.price}</p>
             <div className='short_description'>
                 <p>{product.description}</p>
@@ -58,4 +58,4 @@ function Product_Details({ onAddToCart }) {
   )
 }
 
-export default Product_Details
+export default ProductDetails

@@ -5,29 +5,38 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Route,Routes } from 'react-router-dom';
-import Product_Page from './Product_Page';
-import Product_Details from './Product_Details'
+import ProductPage from './ProductPage';
+import ProductDetails from './ProductDetails'
 import PageNotFound from './PageNotFound';
+import CheckoutPage from './CheckoutPage';
 import{ useState} from 'react';
 
 function App() {
-  const [basket,updateBasket]=useState({})
+  const savedData=JSON.parse(localStorage.getItem("cartData")||"{}");
+    
+  const [basket,updateBasket]=useState(savedData)
   function handleAddToCart(count,prdouctId){
     let oldCount=basket[prdouctId]||0;
-    updateBasket({...basket,[prdouctId]:oldCount+count});
+    const newCart={...basket,[prdouctId]:oldCount+count};
+    updateBasket(newCart);
+    const cartString=JSON.stringify(newCart);
+    localStorage.setItem("cartData",cartString);
   }
   const totalCount=Object.keys(basket).reduce((reduced,current)=>reduced+basket[current],0);
   return (
     <div className="App">
-      <Navbar basketCount={basket}/>
+      <Navbar basketCount={totalCount}/>
       <Routes>
-        <Route path='/' element={<Product_Page/>}>
+        <Route path='/' element={<ProductPage/>}>
         </Route>
-        <Route path='/detail/:id' element={<Product_Details onAddToCart={handleAddToCart}/>}>
+        <Route path='/detail/:id' element={<ProductDetails onAddToCart={handleAddToCart}/>}>
+        </Route>
+        <Route path='/checkout' element={<CheckoutPage/>}>
         </Route>
         <Route path='*' element={<PageNotFound />}>
         </Route>
       </Routes>
+
     </div>
   );
 }
