@@ -5,7 +5,7 @@ import Heading from './Heading';
 import { CiSearch } from 'react-icons/ci';
 import axios from 'axios';
 import Loading from './Loading'
-import PageNotFound from './PageNotFound';
+
 
 
 
@@ -32,7 +32,7 @@ function Content() {
    let lowercaseTitle=item.title.toLowerCase();
    return lowercaseTitle.indexOf(lowercaseQuery)!== -1;
   })
-  if(choice==2)
+  if(choice===2)
   {console.log("its here");
     data.sort(function(x,y)
     {
@@ -40,13 +40,13 @@ function Content() {
 
     })
   }
-  if(choice==3)
+  if(choice===3)
   {
     data.sort(function(x,y){
       return x.title<y.title?1:-1;
     })
   }
-  if(choice==4)
+  if(choice===4)
   {
     data.sort(function(x,y)
    {
@@ -59,7 +59,7 @@ function Content() {
     updateQuery(newQuery);
   }
   function arrangeItems(event){
-    const newChoice=event.target.value;
+    const newChoice=+event.target.value;
     updateChoice(newChoice);
   } 
   if(loading){

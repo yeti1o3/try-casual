@@ -4,9 +4,9 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { Route,Routes, json } from 'react-router-dom';
-import Product_Page from './Product_Page';
-import Product_Details from './Product_Details'
+import { Route,Routes } from 'react-router-dom';
+import ProductPage from './ProductPage';
+import ProductDetails from './ProductDetails'
 import PageNotFound from './PageNotFound';
 import CheckoutPage from './CheckoutPage';
 import{ useState} from 'react';
@@ -27,9 +27,9 @@ function App() {
     <div className="App">
       <Navbar basketCount={totalCount}/>
       <Routes>
-        <Route path='/' element={<Product_Page/>}>
+        <Route path='/' element={<ProductPage/>}>
         </Route>
-        <Route path='/detail/:id' element={<Product_Details onAddToCart={handleAddToCart}/>}>
+        <Route path='/detail/:id' element={<ProductDetails onAddToCart={handleAddToCart}/>}>
         </Route>
         <Route path='/checkout' element={<CheckoutPage/>}>
         </Route>
