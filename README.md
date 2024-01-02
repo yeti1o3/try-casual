@@ -1,3 +1,10 @@
+#Screenshot
+
+![Screenshot from 2024-01-02 16-31-40](https://github.com/yeti1o3/try-casual/assets/90787719/f12828d8-4421-45f7-bd3c-6b51def778f2)
+![Screenshot from 2024-01-02 16-30-06](https://github.com/yeti1o3/try-casual/assets/90787719/b3539f4d-4167-42b8-a62f-876711722a87)
+![Screenshot from 2024-01-02 16-32-42](https://github.com/yeti1o3/try-casual/assets/90787719/c832f920-9b2e-4ab8-b015-246b69af4052)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
