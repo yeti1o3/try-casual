@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
-import './Content.css';
+import './styles/Content.css';
 import Heading from './Heading';
 import { CiSearch } from 'react-icons/ci';
 import axios from 'axios';

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css'
+import './styles/Navbar.css'
 import { Link } from 'react-router-dom'
 import { BiShoppingBag } from 'react-icons/bi'
 function Navbar({basketCount}) {

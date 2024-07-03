@@ -1,6 +1,6 @@
 import React from 'react'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import './Loading.css'
+import './styles/Loading.css'
 
 function Loading() {
   return (
