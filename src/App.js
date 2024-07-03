@@ -6,7 +6,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Route,Routes } from 'react-router-dom';
 import ProductPage from './ProductPage';
-import ProductDetails from './ProductDetails'
+import ProductDetails from './ProductDetails';
 import PageNotFound from './PageNotFound';
 import CheckoutPage from './CheckoutPage';
 import{ useState} from 'react';

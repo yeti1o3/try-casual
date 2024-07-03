@@ -12,8 +12,8 @@ function Navbar({basketCount}) {
         <div className='navbar__Mainlogo'><img src="https://trycasuals.com/wp-content/uploads/2019/06/print-1-1.svg" alt=''/></div> 
       </Link>
       <div className='navbar__Links'>
-        <div>Link1</div>
-        <div>Link2</div>
+        <div>About Us</div>
+        <div>Contact</div>
         <Link to={'/checkout'} className='addtocart__Link' ><div className='navbar__Addtocart'><BiShoppingBag/><span>{basketCount}</span></div></Link>
         
       </div>
