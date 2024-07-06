@@ -9,7 +9,7 @@ function Navbar({basketCount}) {
       <div className="navbar__Content">
       
       <Link to={'/'} className='mainlogo__Link'>
-        <div className='navbar__Mainlogo'><img src="https://trycasuals.com/wp-content/uploads/2019/06/print-1-1.svg" alt=''/></div> 
+        <div className='navbar__Mainlogo'><h1>SHOP</h1></div> 
       </Link>
       <div className='navbar__Links'>
         <div>About Us</div>
